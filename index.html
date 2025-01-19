@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAA 12 Configurator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>HAA 12 Configurator</h1>
+
+    <div class="form-container">
+      <label for="deviceType">Тип устройства:</label>
+      <select id="deviceType">
+        <option value="light">Свет</option>
+        <option value="fan">Вентилятор</option>
+        <option value="sensor">Датчик</option>
+      </select>
+
+      <label for="brightness">Яркость (0-100):</label>
+      <input type="number" id="brightness" min="0" max="100" value="100">
+
+      <label for="colorTemperature">Цветовая температура (Кельвины):</label>
+      <input type="number" id="colorTemperature" min="2000" max="6500" value="6500">
+
+      <button id="generateButton">Сгенерировать конфигурацию</button>
+    </div>
+
+    <h2>Сгенерированная конфигурация:</h2>
+    <pre id="configOutput"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
